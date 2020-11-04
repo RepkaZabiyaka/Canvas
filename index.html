@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="200" height="200"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        
+        ctx.lineWidth = 3;
+
+        var circle = function (x,y, radius, fillCircle) {
+           
+            ctx.beginPath();
+            ctx.arc(x,y,radius,0, Math.PI*2,false);
+            ctx.stroke();
+            if (fillCircle == true){
+                ctx.fill();
+            };
+        }
+        var circleX = function (x,y, radius, fillCircle) {
+           ctx.strokeStyle = "Yellow"; 
+           ctx.beginPath();
+           ctx.arc(x,y,radius,0, Math.PI*2,false);
+           ctx.stroke();
+           ctx.fillStyle = "Yellow";
+           ctx.fill();
+           
+        
+       }
+        circle(70,50,30,0);
+        circle(70,130,50,0);
+        circle(60,40,5,1);
+        circle(80,40,5,1);
+        circle(70,100,5,1);
+        circle(70,125,5,1);
+        circle(70,150,5,1);
+        circleX(70,55,5,0);
+        
+ 
+    </script>
+</body>
+
+</html>
